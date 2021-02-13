@@ -2,7 +2,7 @@
 
 Read: a to b to a
 
-`atob` and ´btoa´ utilities to convert base64 encoded ASCII text to binary and vice versa.
+`atob` and `btoa` utilities to convert base64 encoded ASCII text to binary and vice versa.
 
 ## Development
 
