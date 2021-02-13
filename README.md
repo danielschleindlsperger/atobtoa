@@ -6,7 +6,7 @@ Read: a to b to a
 
 ## Development
 
-The tool has been written in Janet which outputs small executable that are fast to start up.
+The tool has been written in [Janet](https://janet-lang.org) which outputs small executables that are fast to start up.
 
 ### Useful commands
 
