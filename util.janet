@@ -8,6 +8,16 @@
           xs)
       xs)))
 
+(defn array-pad-left
+  [xs size padder]
+  "Fills and returns an array with `padder` at the start until it reaches `size`. Returns array as is if it's already at or over the given size."
+  (let [l (length xs)]
+    (if (< l size)
+      (do (for i 0 (- size l)
+            (array/insert xs i padder))
+          xs)
+      xs)))
+
 (defn reverse-array [xs]
       (let [l (length xs)
             new-arr (array/new l)]
@@ -20,7 +30,7 @@
   "Converts a binary number into its binary representation of an array of bits."
   (default bin @[])
     (if (< x 1)
-        (reverse-array (array-pad-right bin 8 0))
+        (reverse-array bin)
         (let [rem (% x 2)
             new-x (math/floor (/ x 2))]
             (decimal->binary new-x (array/push bin rem)))))
